@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "proxy": "mkcert -install && mkcert localhost && local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
+    "dev-ssl": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "stackblitz": "npm run dev"
+  },
+  "stackblitz": {
+    "startCommand": "npm run stackblitz"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@storyblok/nuxt": "^5.6.6",
+    "nuxt": "^3.6.5"
+  },
+  "dependencies": {
+    "@nuxt/image": "^1.0.0-rc.2",
+    "preline": "^1.9.0",
+    "sass": "^1.68.0",
+    "vuetify": "^3.3.19"
+  }
+}
